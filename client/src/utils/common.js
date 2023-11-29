@@ -5,12 +5,12 @@ export const links = [
 		url: '/',
 	},
 	{
-		id: 1,
+		id: 2,
 		text: 'about',
 		url: '/about',
 	},
 	{
-		id: 1,
+		id: 3,
 		text: 'products',
 		url: '/products',
 	},
