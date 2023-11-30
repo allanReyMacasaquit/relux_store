@@ -1,6 +1,6 @@
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { useProductsContext } from '../context/products_context.jsx';
+import { useProductsContext } from '../provider/context/products_context';
 
 export default function Cart() {
 	const { closeSidebar } = useProductsContext();

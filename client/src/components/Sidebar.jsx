@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import { links } from '../utils/common';
 import Cart from './Cart';
 import Login from './Login';
-import { useProductsContext } from '../context/products_context.jsx';
+import { useProductsContext } from '../provider/context/products_context.jsx';
 
 export default function Sidebar() {
 	const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -15,7 +15,7 @@ export default function Sidebar() {
 				isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
 			}`}
 		>
-			<div className='mt-[-65px] flex items-center justify-between p-4'>
+			<div className='mt-[-55px] flex items-center justify-between p-4'>
 				<div className='ml-5'>
 					<Link to='/'>
 						<img className='w-44' src={reluxLogo} alt='logo' />
@@ -23,7 +23,7 @@ export default function Sidebar() {
 				</div>
 				<button
 					type='button'
-					className='text-red-700 text-2xl mx-6'
+					className='text-red-700 text-3xl mx-5'
 					onClick={closeSidebar}
 				>
 					<FaTimes />

@@ -4,12 +4,12 @@ import reluxLogo from '../assets/relux.svg'; // Import the image
 import { FaBars } from 'react-icons/fa';
 import Cart from './Cart';
 import Login from './Login';
-import { useProductsContext } from '../context/products_context.jsx';
+import { useProductsContext } from '../provider/context/products_context.jsx';
 
 export default function Navbar() {
 	const { openSidebar } = useProductsContext();
 	return (
-		<nav className='bg-slate-100 h-20 flex items-center justify-center'>
+		<nav className='bg-slate-100 h-[10vh] flex items-center justify-center'>
 			<div className='mx-10 flex items-center justify-between w-[95%] max-w-6xl'>
 				<div className=''>
 					<Link to='/'>

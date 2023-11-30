@@ -1,4 +1,4 @@
-import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from '../actions.js';
+import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from '../actions';
 
 const products_reducer = (state, action) => {
 	switch (action.type) {

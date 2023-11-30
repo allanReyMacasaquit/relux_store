@@ -1,3 +1,3 @@
 export default function Login() {
-	return <div>LoginPage</div>;
+	return <div className='h-[81vh]'>LoginPage</div>;
 }

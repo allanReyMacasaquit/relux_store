@@ -9,7 +9,7 @@ export default function Footer() {
 	}, []);
 
 	return (
-		<footer className='bg-slate-700 py-4 text-center'>
+		<footer className='bg-slate-700 py-4 text-center '>
 			<p className='text-slate-200'>
 				&copy; <span className='font-bold'>{currentYear}</span>
 				<span className='text-slate-400 font-medium tracking-widest ml-2 '>

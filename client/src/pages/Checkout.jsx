@@ -1,3 +1,3 @@
 export default function Checkout() {
-	return <div>Checkout</div>;
+	return <div className='h-[81vh]'>Checkout</div>;
 }

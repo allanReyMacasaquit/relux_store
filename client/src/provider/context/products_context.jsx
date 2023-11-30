@@ -1,7 +1,7 @@
 import React, { useContext, useReducer } from 'react';
-import products_reducer from '../reducers/products_reducer';
-import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from '../actions';
 import PropTypes from 'prop-types';
+import { SIDEBAR_CLOSE, SIDEBAR_OPEN } from '../actions';
+import products_reducer from '../reducers/products_reducer.js';
 
 const ProductsContext = React.createContext();
 

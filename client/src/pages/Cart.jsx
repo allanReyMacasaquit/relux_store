@@ -1,3 +1,3 @@
 export default function Cart() {
-	return <div>CartPage</div>;
+	return <div className='h-[81vh]'>CartPage</div>;
 }

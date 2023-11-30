@@ -1,3 +1,3 @@
 export default function Products() {
-	return <div>Products</div>;
+	return <div className='h-[81vh]'>Products</div>;
 }
