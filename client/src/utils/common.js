@@ -15,3 +15,30 @@ export const links = [
 		url: '/products',
 	},
 ];
+
+export const services = [
+	{
+		id: 1,
+		icon: 'GiCompass',
+		title: 'mission',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe iusto cum corporis maxime, eum non expedita nihil consequuntur dignissimos',
+	},
+	{
+		id: 2,
+		icon: 'GiDiamondHard',
+		title: 'vision',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe iusto cum corporis maxime, eum non expedita nihil consequuntur dignissimos',
+	},
+	{
+		id: 3,
+		icon: 'GiBridge',
+		title: 'statement',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe iusto cum corporis maxime, eum non expedita nihil consequuntur dignissimos',
+	},
+	{
+		id: 4,
+		icon: 'GiAllForOne',
+		title: 'commitment',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe iusto cum corporis maxime, eum non expedita nihil consequuntur dignissimos',
+	},
+];
