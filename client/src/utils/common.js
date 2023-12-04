@@ -42,3 +42,8 @@ export const services = [
 		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe iusto cum corporis maxime, eum non expedita nihil consequuntur dignissimos',
 	},
 ];
+
+export const product_url = 'https://course-api.com/react-store-products';
+
+export const singel_product_url =
+	'https://course-api.com/react-store-single-product?id=';

@@ -15,7 +15,7 @@ export default function Services() {
 						custom furniture <br />
 						built only for you
 					</h3>
-					<p className='w-auto mx-10 tracking-widest'>
+					<p className='w-auto mx-12 tracking-widest'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
 						rem pariatur praesentium dolorum animi impedit voluptate
 						perferendis. Perferendis, laboriosam cupiditate! Modi consequatur,

@@ -1,4 +1,4 @@
-import aboutLogo from '../assets/hero-bcg.jpeg';
+import aboutLogo from '../assets/herobcg.jpg';
 import PageHero from '../components/PageHero';
 export default function About() {
 	return (
