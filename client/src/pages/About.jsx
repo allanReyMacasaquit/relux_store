@@ -6,7 +6,7 @@ export default function About() {
 			<PageHero title='about' />
 			<div className=' grid gap-16 page section section-center'>
 				<img
-					className='w-full border rounded-lg h-[500px] object-cover'
+					className='w-full  h-[500px] object-cover'
 					src={aboutLogo}
 					alt='about-logo'
 				/>

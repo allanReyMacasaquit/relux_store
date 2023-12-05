@@ -8,8 +8,8 @@ import { services } from '../utils/common';
 
 export default function Services() {
 	return (
-		<main className='py-10 mt-10 bg-slate-100'>
-			<div className='container mx-auto'>
+		<main className='py-10 bg-slate-100 shadow-lg'>
+			<div className='container mx-auto mt-20'>
 				<div className='grid grid-cols-1 items-center text-center md:grid-cols-2 lg:grid-cols-2 gap-6 mb-10'>
 					<h3>
 						custom furniture <br />

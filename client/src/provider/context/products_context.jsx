@@ -18,7 +18,7 @@ const initialState = {
 	products_loading: false,
 	products_error: false,
 	products: [],
-	products_featured: false,
+	products_featured: [],
 };
 
 export const ProductsProvider = ({ children }) => {
@@ -30,26 +30,27 @@ export const ProductsProvider = ({ children }) => {
 	const closeSidebar = () => {
 		dispatch({ type: SIDEBAR_CLOSE });
 	};
+	const fetchProducts = async () => {
+		dispatch({ type: GET_PRODUCTS_BEGIN });
+		try {
+			const response = await axios.get(
+				'https://course-api.com/react-store-products'
+			);
+			const products = response.data;
+			dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
+		} catch (error) {
+			dispatch({ type: GET_PRODUCTS_ERROR });
+		}
+	};
 
 	useEffect(() => {
-		const fetchProducts = async () => {
-			dispatch({ type: GET_PRODUCTS_BEGIN });
-			try {
-				const response = await axios.get(
-					'https://course-api.com/react-store-products'
-				);
-				const products = response.data;
-				dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
-			} catch (error) {
-				dispatch({ type: GET_PRODUCTS_ERROR });
-			}
-		};
-
 		fetchProducts();
 	}, []);
 
 	return (
-		<ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
+		<ProductsContext.Provider
+			value={{ ...state, openSidebar, closeSidebar, fetchProducts }}
+		>
 			{children}
 		</ProductsContext.Provider>
 	);

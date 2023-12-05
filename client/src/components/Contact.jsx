@@ -37,8 +37,8 @@ const Contact = () => {
 	};
 
 	return (
-		<section className='p-10'>
-			<div className='container mx-auto'>
+		<section className='p-10 '>
+			<div className='container mx-auto mt-20'>
 				<h3 className='text-4xl mb-4'>Schedule your visit!</h3>
 				<p className='leading-8 max-w-72 text-gray-500'>
 					No judgement, We will embrace you as you are.
