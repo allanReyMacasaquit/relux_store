@@ -11,7 +11,7 @@ export default function Sidebar() {
 
 	return (
 		<aside
-			className={`fixed top-0 left-0 h-full w-full bg-slate-100 flex flex-col transform transition-all duration-300 ${
+			className={`fixed top-0 left-0 h-full z-50 w-full bg-slate-100 flex flex-col transform transition-all duration-300 ${
 				isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
 			}`}
 		>

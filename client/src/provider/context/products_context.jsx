@@ -1,10 +1,14 @@
 import React, { useContext, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { products as url } from '../../utils/common.js';
 import {
 	GET_PRODUCTS_BEGIN,
 	GET_PRODUCTS_ERROR,
 	GET_PRODUCTS_SUCCESS,
+	GET_SINGLE_PRODUCT_BEGIN,
+	GET_SINGLE_PRODUCT_ERROR,
+	GET_SINGLE_PRODUCT_SUCCESS,
 	SIDEBAR_CLOSE,
 	SIDEBAR_OPEN,
 } from '../actions';
@@ -19,6 +23,9 @@ const initialState = {
 	products_error: false,
 	products: [],
 	products_featured: [],
+	single_product_loading: false,
+	single_product_error: false,
+	single_product: [],
 };
 
 export const ProductsProvider = ({ children }) => {
@@ -30,12 +37,10 @@ export const ProductsProvider = ({ children }) => {
 	const closeSidebar = () => {
 		dispatch({ type: SIDEBAR_CLOSE });
 	};
-	const fetchProducts = async () => {
+	const fetchProducts = async (url) => {
 		dispatch({ type: GET_PRODUCTS_BEGIN });
 		try {
-			const response = await axios.get(
-				'https://course-api.com/react-store-products'
-			);
+			const response = await axios.get(url);
 			const products = response.data;
 			dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
 		} catch (error) {
@@ -43,14 +48,29 @@ export const ProductsProvider = ({ children }) => {
 		}
 	};
 
+	const fetchSingleProduct = async (url) => {
+		dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
+		try {
+			const response = await axios.get(url);
+			const singleProduct = response.data;
+			dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
+		} catch (error) {
+			dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
+		}
+	};
 	useEffect(() => {
-		fetchProducts();
+		fetchProducts(url);
 	}, []);
 
+	const values = {
+		...state,
+		openSidebar,
+		closeSidebar,
+		fetchSingleProduct,
+	};
+
 	return (
-		<ProductsContext.Provider
-			value={{ ...state, openSidebar, closeSidebar, fetchProducts }}
-		>
+		<ProductsContext.Provider value={values}>
 			{children}
 		</ProductsContext.Provider>
 	);

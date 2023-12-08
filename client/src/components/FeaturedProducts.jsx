@@ -19,10 +19,15 @@ export default function FeaturedProducts() {
 
 	const sliderSettings = {
 		dots: true,
-		infinite: true,
-		speed: 500,
+		infinite: true, // Change infinite to true for autoplay to work seamlessly
+		speed: 1000,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		autoplay: true, // Autoplay option
+		autoplaySpeed: 3000, // Autoplay speed in milliseconds
+		arrows: true, // Show arrows
+
+		centerMode: true, // Enable center mode
 		responsive: [
 			{
 				breakpoint: 768,
@@ -38,13 +43,14 @@ export default function FeaturedProducts() {
 			},
 		],
 	};
+
 	return (
 		<main className=''>
-			<div className='title mb-10 pt-10'>
+			<div className='title mb-10 pt-10 mt-[-90px] md:mt-[60px] lg:mt-[30px]'>
 				<h2 className=''>best seller</h2>
 				<div className='underline text-amber-700'></div>
 			</div>
-			<div className='shadow-2xl my-10'>
+			<div className='shadow-2xl my-10 md:mt-[30px]'>
 				<Slider {...sliderSettings}>
 					{products_featured.map((product, index) => (
 						<div
@@ -54,13 +60,13 @@ export default function FeaturedProducts() {
 							className='relative opacity-80 hover:opacity-100 '
 						>
 							<img
-								className='object-fit h-96 w-full p-1 rounded-2xl'
+								className='object-cover h-96 w-full p-1 rounded-2xl'
 								src={product.image}
 								alt={product.name}
 							/>
 							{hoveredIndex === index && (
 								<Link
-									className='absolute left-[45%] top-[45%] bg-white opacity-80 hover:opacity-100 p-4 rounded-full'
+									className='absolute left-[40%] top-[40%] bg-white opacity-80 hover:opacity-100 p-4 rounded-full'
 									to={`/products/${product.id}`}
 								>
 									<FaSearch className='text-3xl text-amber-500 ' />

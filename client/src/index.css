@@ -4,10 +4,10 @@
 
 :root {
 	/* dark shades of primary color*/
-	--clr-primary-1: hsl(22, 28%, 21%);
+	--clr-primary-1: hsl(21, 29%, 13%);
 	--clr-primary-2: hsl(22, 28%, 29%);
 	--clr-primary-3: hsl(22, 28%, 37%);
-	--clr-primary-4: hsl(22, 28%, 45%);
+	--clr-primary-4: hsl(22, 71%, 55%);
 	/* primary/main color */
 	--clr-primary-5: rgb(180 83 9);
 	/* lighter shades of primary color */
@@ -182,7 +182,7 @@ p {
 }
 .btn:hover {
 	color: var(--clr-primary-1);
-	background: var(--clr-primary-7);
+	background: var(--clr-primary-4);
 }
 .title {
 	text-align: center;
